@@ -1,0 +1,22 @@
+<div class="popup">
+    <div class="popup-content">
+      <h2>ACTUALIZAR USUARIO</h2>
+      <form>
+        <label>Nombre:</label>
+        <input type="text" name="nombre" [(ngModel)]="usuario.nombre">
+
+        <label>Apellidos:</label>
+        <input type="text" name="apellidos" [(ngModel)]="usuario.apellidos">
+
+        <label>Email:</label>
+        <input type="text" name="email" [(ngModel)]="usuario.email">
+
+        <label>Rol:</label>
+        <select id="rol" [(ngModel)]="usuario.rol" name="rol">
+        <option *ngFor="let rol of roles" [value]="rol">{{ rol }}</option>
+        </select>
+
+        <button type="submit" (click)="closePopup()">Guardar</button>
+      </form>
+    </div>
+  </div>

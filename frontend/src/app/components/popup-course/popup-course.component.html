@@ -1,0 +1,8 @@
+<div class="popup">
+  <h4>{{ ejercicioSeleccionado?.titulo }}</h4>
+  <p>{{ ejercicioSeleccionado?.descripcion }}</p>
+  <p><strong>Parte del cuerpo:</strong> {{ ejercicioSeleccionado?.parteCuerpo }}</p>
+  <p><strong>Músculo:</strong> {{ ejercicioSeleccionado?.musculo }}</p>
+  <p><strong>Enlace a video:</strong> <a href="{{ ejercicioSeleccionado?.enlaceVideo }}" target="_blank">{{ ejercicioSeleccionado?.enlaceVideo }}</a></p>
+  <button (click)="closePopup()">Cerrar</button>
+</div>

@@ -1,0 +1,54 @@
+<h1>Nuevo Usuario</h1>
+<div class="container-fluid">
+  <!--  <div class="row">
+        <div class="col-md-6">-->
+            <div class="card">
+                <form class="form-horizontal"  id="formulario1" (ngSubmit)="register()" [formGroup]="registerForm"  >
+                    <div class="card-body">
+                        <h4 class="card-title">Crear nuevo usuario</h4>
+                        <div class="form-group row">
+                            <label for="titulo" class="col-sm-3 text-right control-label col-form-label">Nombre</label>
+                            <div class="col-sm-9">
+                                <input type="text" name="titulo" formControlName="nombre" class="form-control" id="titulo" placeholder="Nombre de usuario..." >
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="descripcion" class="col-sm-3 text-right control-label col-form-label">Apellidos</label>
+                            <div class="col-sm-9">
+                                <input type="text" name="descripcion" formControlName="apellidos" class="form-control" id="apellidos" placeholder="Apellidos...">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="descripcion" class="col-sm-3 text-right control-label col-form-label">Email</label>
+                            <div class="col-sm-9">
+                                <input type="email" name="descripcion" formControlName="email" class="form-control" id="email" placeholder="Email de usuario..." >
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="descripcion" class="col-sm-3 text-right control-label col-form-label">Contraseña</label>
+                            <div class="col-sm-9">
+                                <input type="password" name="descripcion"  formControlName="password" class="form-control" id="psw" placeholder="Al menos una letra, un número y siete carácteres..." >
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="descripcion" class="col-sm-3 text-right control-label col-form-label">Repetir contraseña</label>
+                            <div class="col-sm-9">
+                                <input type="password" name="descripcion" formControlName="password2" class="form-control" id="psw2" placeholder="" >
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="border-top">
+                        <div class="card-body">
+                            <button type="submit" class="btn btn-primary" [disabled]="waiting2"><i class="fas fa-spinner fa-spin m-r-10" *ngIf="waiting2"></i>Crear Usuario</button>
+                        </div>
+                    </div>
+                </form>
+        <!--  </div>
+        </div>-->
+  </div>

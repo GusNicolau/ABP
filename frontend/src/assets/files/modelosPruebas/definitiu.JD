@@ -1,0 +1,110 @@
+{
+    "meta": 
+    {
+        "version": "1.1.1",
+        "generator": "cgdev json exporter"
+    },
+    "model": 
+    {
+        "meshes": [
+            {
+                "meta": 
+                {
+                    "vertNum": 5,
+                    "faceNum": 3,
+                    "vertElementNum": 5
+                },
+                "name": "Plane001",
+                "node": 1,
+                "verts": [10,20.0,0,    0,0,0,       30,20.0,0,    20,0,0,    40,0,0],
+                "vertElement": 
+                {
+                    "vertIndices": [0,1,3,2,4],
+                    "normals": [0,0,1,0,0,1,0,0,1,0,0,1,0,0,1],
+                    "uvs": [[4.17808,0,6.26712,0,6.26712,7.00713,4.17808,7.00713,6.06468,7.00713]]
+                },
+                "face": 
+                {
+                    "vertElementIndices": [0,1,2,3,0,2,3,2,4],
+                    "groups": [
+                        {
+                            "start": 0,
+                            "count": 9,
+                            "materialIndex": 0
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "hierarchy": 
+    {
+        "nodes": [
+            {
+                "name": "SceneRoot",
+                "parent": -1,
+                "pos": [0,0,0],
+                "scl": [1,1,1],
+                "rot": [0,0,0,1]
+            },
+            {
+                "name": "Plane001",
+                "parent": 0,
+                "pos": [0,5.0e-05,0],
+                "scl": [1,1,1],
+                "rot": [0,0,0,1]
+            }
+        ]
+    },
+    "animation": 
+    {
+        "keyframeAnimations": [
+            {
+                "name": "Anim1",
+                "timeline": "seconds",
+                "fps": 30,
+                "length": 3.33333,
+                "animNodes": [
+                    {
+                        "nodeIndex": 0,
+                        "nodeName": "SceneRoot",
+                        "scl": 
+                        {
+                            "times": [0,3.33333],
+                            "values": [1,1,1,1,1,1]
+                        },
+                        "pos": 
+                        {
+                            "times": [0,3.33333],
+                            "values": [0,0,0,0,0,0]
+                        },
+                        "rot": 
+                        {
+                            "times": [0,3.33333],
+                            "values": [0,0,0,1,0,0,0,1]
+                        }
+                    },
+                    {
+                        "nodeIndex": 1,
+                        "nodeName": "Plane001",
+                        "scl": 
+                        {
+                            "times": [0,3.33333],
+                            "values": [1,1,1,1,1,1]
+                        },
+                        "pos": 
+                        {
+                            "times": [0,3.33333],
+                            "values": [0,5.0e-05,0,0,5.0e-05,0]
+                        },
+                        "rot": 
+                        {
+                            "times": [0,3.33333],
+                            "values": [0,0,0,1,0,0,0,1]
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

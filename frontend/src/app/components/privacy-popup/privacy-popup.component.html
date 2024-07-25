@@ -1,0 +1,38 @@
+<div class="privacy-popup-overlay" *ngIf="showPopup">
+  <div class="privacy-popup-content">
+    <p>Nos comprometemos a proteger su privacidad. Lea nuestra <a href="/privacy" target="_blank">Política de Privacidad</a>.</p>
+    <div class="privacy-popup-buttons">
+      <button (click)="acceptPrivacyPolicy()">Aceptar</button>
+      <button (click)="rejectPrivacyPolicy()">Rechazar</button>
+      <button (click)="openPrivacySettings()">Configuración de Privacidad</button>
+    </div>
+  </div>
+</div>
+<div *ngIf="showAccessDeniedMessage" class="access-denied-message">
+  <p>Lo sentimos, no puede utilizar esta aplicación sin aceptar nuestra política de privacidad.</p>
+  <button (click)="reconsiderPrivacyPolicy()">Volver a intentar</button>
+</div>
+
+<div *ngIf="showAccessDeniedMessageSettings" class="access-denied-message">
+  <p>Lo sentimos, con las opciones de privacidad seleccionadas no puede utilizar esta aplicación.</p>
+  <button (click)="reconsiderPrivacyPolicy()">Volver a intentar</button>
+</div>
+
+<div class="privacy-settings-modal" *ngIf="showPrivacySettings">
+  <div class="privacy-settings-content">
+    <h2>Configuración de Privacidad</h2>
+    <form>
+      <div>
+        <input type="checkbox" id="tracking" [(ngModel)]="privacySettings.tracking" name="tracking">
+        <label for="tracking">Permitir seguimiento</label>
+      </div>
+      <div>
+        <input type="checkbox" id="personalization" [(ngModel)]="privacySettings.personalization" name="personalization">
+        <label for="personalization">Permitir personalización</label>
+      </div>
+      <!-- Add more privacy settings as needed -->
+      <button (click)="savePrivacySettings()">Guardar</button>
+      <button (click)="closePrivacySettings()">Cerrar</button>
+    </form>
+  </div>
+</div>

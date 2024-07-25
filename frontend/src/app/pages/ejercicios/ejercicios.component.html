@@ -1,0 +1,69 @@
+<app-popup-course *ngIf='showPopup'></app-popup-course>
+<!--<app-popup *ngIf='showPopup'></app-popup>-->
+
+<h1>Ejercicios</h1>
+
+<form [formGroup]="formularioBusqueda" (ngSubmit)="buscar()">
+  <input type="text" formControlName="titulo" placeholder="Buscar ejercicio...">
+  <button type="submit" class="botBuscador">Buscar</button>
+</form>
+<br>
+<ul *ngIf="ejercicios">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="d-flex flex-wrap">
+          <div class="card mx-2 mb-2" style="max-width: 330px;" *ngFor="let ejercicio of ejercicios">
+            <div class="el-card-item" style="display: flex; flex-direction: column; align-items: center;">
+              <div class="el-card-avatar el-overlay-1 position-relative" style="margin-bottom: 10px;">
+                <img [src]="'../../../assets/uploads/foto/' + ejercicio.imagen" class="img-thumbnail" alt="user" style="max-height: 200px; object-fit: cover;" />
+              </div>
+              <div class="el-card-content text-center">
+                <h5 class="card-title">{{ ejercicio.titulo }}</h5>
+                <h4 class="card-title">{{ ejercicio.musculo }}</h4>
+                <div class="modeOptions" *ngIf="usuarioAdmin" style="margin-top: auto; margin-bottom: 20px;">
+                  <button class="btn btn-info" (click)="mostrarEjercicio(ejercicio)"><i class="ti-info"></i></button>
+                  <button class="btn btn-warning" (click)="editarEjercicio(ejercicio)"><i class="ti-slice"></i></button>
+                  <button class="btn btn-danger" (click)="borrarEjercicio(ejercicio._id, ejercicio.imagen)"><i class="ti-eraser"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ul>
+<br>
+<hr>
+<H1>Todos los ejercicios</H1>
+<hr>
+<br>
+<div class="container">
+  <div *ngFor="let grupo of gruposMusculares">
+    <div class="gMuscular" >{{ grupo.parteCuerpo }}</div>
+    <div class="row">
+      <div class="col-12">
+        <div class="d-flex flex-wrap">
+          <div class="card mx-2 mb-2" style="max-width: 330px;" *ngFor="let item of grupo.items">
+            <div class="el-card-item" style="display: flex; flex-direction: column; align-items: center;">
+              <div class="el-card-avatar el-overlay-1 position-relative" style="margin-bottom: 10px;">
+                <img [src]="'../../../assets/uploads/foto/' + item.imagen" class="img-thumbnail" alt="user" style="max-height: 200px; object-fit: cover;" />
+              </div>
+              <div class="el-card-content text-center">
+                <h5 class="card-title">{{ item.titulo }}</h5>
+                <h4 class="card-title">{{ item.musculo }}</h4>
+               <!-- <p *ngIf="!usuarioAdmin" class="card-text">{{ item.descripcion }}</p>-->
+                <div class="modeOptions" *ngIf="usuarioAdmin" style="margin-top: auto; margin-bottom: 20px;">
+                  <button class="btn btn-info" (click)="mostrarEjercicio(item)"><i class="ti-info"></i></button>
+                  <button class="btn btn-warning" (click)="editarEjercicio(item)"><i class="ti-slice"></i></button>
+                  <button class="btn btn-danger" (click)="borrarEjercicio(item._id, item.imagen)"><i class="ti-eraser"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

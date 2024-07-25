@@ -1,0 +1,454 @@
+.login-button {
+    position: fixed;
+    top: 40px;
+    left: 80px;
+    background-color: #e66700; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none;
+    padding: 10px 20px; /* Espacio de relleno */
+    font-size: 16px; /* Tamaño de fuente */
+    border-radius: 5px; /* Borde redondeado */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón sobre el botón */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+  }
+
+  /* Cambiar el estilo al pasar el ratón sobre el botón */
+  .login-button:hover {
+    background-color: #8b4002; /* Cambia el color de fondo cuando se pasa el ratón */
+  }
+
+  .popup {
+  position: fixed;
+  top: 80px; /* Ajusta la distancia desde la parte superior según tu diseño */
+  left: 17.8%; /* Centra horizontalmente el popup */
+  transform: translateX(-50%); /* Centra horizontalmente el popup */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  z-index: 999; /* Asegúrate de que el popup esté por encima de otros elementos */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+  border-radius: 5px; /* Borde redondeado */
+  max-width: 380px; /* Ancho máximo del popup */
+  }
+
+  .popupPsw {
+    position: fixed;
+    top: 80px; /* Ajusta la distancia desde la parte superior según tu diseño */
+    left: 15.8%; /* Centra horizontalmente el popup */
+    transform: translateX(-50%); /* Centra horizontalmente el popup */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    z-index: 999; /* Asegúrate de que el popup esté por encima de otros elementos */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+    border-radius: 5px; /* Borde redondeado */
+    max-width: 380px; /* Ancho máximo del popup */
+    }
+
+    .popupPsw .retroceder {
+      background-color: #e66700;
+      color: white;
+      border: none;
+      padding: 5px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+  .horizontal-container {
+    display: flex;
+    align-items: center;
+}
+
+.horizontal-container label {
+    margin-right: 10px; /* Espacio entre el label y el input */
+}
+
+.horizontal-container input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 50px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+  .popupFav {
+    position: fixed;
+    top: 90px; /* Ajusta la distancia desde la parte superior según tu diseño */
+    left: 20.1%; /* Centra horizontalmente el popup */
+    margin-left: 85px;
+    margin-top: 0px;
+    transform: translateX(-50%); /* Centra horizontalmente el popup */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    z-index: 999; /* Asegúrate de que el popup esté por encima de otros elementos */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+    border-radius: 5px; /* Borde redondeado */
+    max-width: 380px; /* Ancho máximo del popup */
+    }
+
+    .popupFav .popup-header {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .popupFav .retroceder {
+      background-color: #e66700;
+      color: white;
+      border: none;
+      padding: 5px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .popupFav .retroceder:hover {
+      background-color: #8b4002;
+    }
+
+    .popupFav .retroceder i {
+      margin-right: 5px;
+    }
+
+  .popup-content {
+    /* Estilos para el contenido del popup, como tamaño de fuente, espaciado, etc. */
+    text-align: center; /* Centra el contenido del popup */
+  }
+
+  .popup-content input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .popup-content button {
+    width: 100%;
+    padding: 10px;
+    background-color: #e66700;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .popup-content button:nth-child(2){
+    width: 60%;
+    padding: 10px;
+    background-color: #022a80;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .popup-content button:nth-child(2):hover{
+
+    background-color: #01012b;
+
+  }
+
+  .popup-content button:hover {
+    background-color: #8b4002; /* Cambia el color de fondo cuando se pasa el ratón */
+  }
+
+  .popup-content p {
+    margin-bottom: 10px; /* Espaciado inferior entre los párrafos */
+  }
+
+  .popup-content a {
+    color: #007bff; /* Color del enlace */
+    text-decoration: none; /* Quita la subrayado del enlace */
+  }
+
+  .popup-content a:hover {
+    text-decoration: underline; /* Subraya el enlace al pasar el ratón sobre él */
+  }
+
+  .popup .popup-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .popup .retroceder {
+    background-color: #e66700;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .popup .retroceder:hover {
+    background-color: #8b4002;
+  }
+
+  .popup .retroceder i {
+    margin-right: 5px;
+  }
+
+  .close-button {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .close-button:hover {
+    color: #ff0000; /* Cambia el color al pasar el ratón sobre el botón */
+  }
+
+  .user-button {
+    background-color: #ffffff; /* Color de fondo del botón */
+    border: none;
+    border-radius: 50%; /* Hace que el botón sea redondo */
+    width: 50px; /* Ajusta el tamaño del botón según tu necesidad */
+    height: 50px; /* Ajusta el tamaño del botón según tu necesidad */
+    cursor: pointer;
+    position: fixed;
+    top: 20px; /* Distancia desde la parte superior */
+    left: 60px; /* Distancia desde la izquierda */
+  }
+
+  .user-button img {
+    width: 100%; /* Ajusta el tamaño de la imagen para que ocupe todo el espacio del botón */
+    height: auto;
+  }
+
+
+  .existing-user-button {
+    background-color: transparent;
+    border: none;
+  }
+
+  .existing-user-button img {
+    width: 40px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: 40px; /* Ajusta el tamaño de la imagen según sea necesario */
+  }
+
+  .dropdown-menu {
+
+    top: 72px;
+    left: 50px;
+    width: 200px;
+   /* position: absolute;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    display: none;*/
+  }
+
+  .dropdown-menu button{
+    padding: 15px 25px;
+            font-size: 16px;
+            color: #000000; /* Color del texto */
+            background-color: #ffffff; /* Color de fondo del botón */
+            border: none;
+            border-radius: 5px; /* Bordes redondeados */
+            cursor: pointer; /* Cambio de cursor al pasar sobre el botón */
+            transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves */
+  }
+
+  .dropdown-menu button:hover {
+    background-color: #e98b10; /* Color de fondo al pasar el mouse */
+    transform: scale(1.01); /* Agranda el botón ligeramente */
+}
+
+.dropdown-menu button:active {
+  background-color: #b6b6b6; /* Color de fondo al hacer clic */
+  transform: scale(1); /* Restablece el tamaño original */
+}
+
+
+  .dropdown-menu.show {
+    display: block;
+  }
+
+  .-user-button:hover {
+    background-color: #007bff; /* Cambia el color de fondo cuando el ratón está encima del botón */
+    transition: background-color 0.3s ease; /* Agrega una transición suave */
+  }
+
+  .terms-container {
+    display:block;
+    align-items: center;
+  }
+
+  .terms-container input[type="checkbox"] {
+    margin-right: 20px; /* Ajusta este valor según sea necesario */
+  }
+
+  .terms-container label {
+    margin-bottom: 10px;
+  }
+
+  /* login-button.component.css */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #f0f0f0;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.popupFav {
+  position: absolute;
+  top: 100px;
+  left: 230px;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  z-index: 999;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  max-width: 430px;
+}
+
+.popupFav .popup-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.popupFav .retroceder {
+  background-color: #e66700;
+  color: white;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.popupFav .retroceder:hover {
+  background-color: #8b4002;
+}
+
+.exercise-item {
+
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s, background-color 0.3s;
+  max-width: 400px;
+  width: 100%;
+}
+
+.exercise-item:hover {
+  transform: scale(1.1);
+}
+
+.text-container {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.exercise-title {
+  font-weight: bold;
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.exercise-description {
+  color: #666;
+}
+
+.play-button {
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.play-button:hover {
+  color: #393939;
+}
+.exercise-item {
+  background-color: #fedcac;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+  transition: transform 0.3s, background-color 0.3s;
+  cursor: pointer;
+}
+
+.exercise-item.expanded {
+  background-color: #fac75f;
+}
+
+.exercise-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  flex: 1;
+}
+
+.exercise-title {
+  font-weight: bold;
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.exercise-description {
+  color: #666;
+}
+
+.popupFav {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.exercise-list {
+  padding: 10px;
+}
+
+.exercise-item {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.star-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 30px;
+  color: #ffffff;
+}
+
+.star-button .fa-star-o {
+  color: #ffcc00;
+}
+
+.star-button .fa-star {
+  color: #ffffff;
+}

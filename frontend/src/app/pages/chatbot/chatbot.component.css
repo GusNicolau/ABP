@@ -1,0 +1,10 @@
+/* Estilo para las etiquetas de datos */
+.slice-label text {
+    fill: #333; /* Color del texto */
+    font-size: 14px; /* Tamaño de la fuente */
+    font-weight: bold; /* Peso de la fuente */
+  }
+  ngx-charts-pie-chart {
+    background: linear-gradient(to bottom, #FFFFFF, #D3D3D3); /* Degradado de colores */
+  }
+  

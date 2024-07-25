@@ -1,0 +1,47 @@
+.modeOptions {
+  display: flex;
+  justify-content: space-around;
+}
+
+.container {
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 20px auto;
+  width: 95%;
+  max-width: 1200px; /* Ajusta el ancho máximo según tus necesidades */
+  border: 2px solid #dddddd; /* Borde gris claro */
+  border-radius: 10px; /* Bordes redondeados */
+  text-align: center; /* Centra el contenido */
+}
+
+.container button {
+  background-color: #ff9900; /* Naranja */
+  color: #ffffff; /* Texto blanco */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px; /* Espacio superior */
+}
+
+.container button:hover {
+  background-color: #ffbf00; /* Cambia el color al pasar el ratón */
+}
+
+.container h1 {
+  color: #333333; /* Color del texto */
+  font-size: 24px; /* Tamaño del texto */
+  margin-bottom: 20px; /* Espacio inferior */
+}
+
+.container h2 {
+  color: #333333; /* Color del texto */
+  font-size: 24px; /* Tamaño del texto */
+  margin-bottom: 20px; /* Espacio inferior */
+}
+
+.container p {
+  color: #666666; /* Color del texto */
+  font-size: 16px; /* Tamaño del texto */
+  margin-bottom: 20px; /* Espacio inferior */
+}

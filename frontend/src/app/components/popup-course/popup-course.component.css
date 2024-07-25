@@ -1,0 +1,51 @@
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 9999;
+  width: 600px; /* Ancho personalizable */
+}
+
+.popup h4 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.popup p {
+  margin-bottom: 10px;
+}
+
+.popup strong {
+  font-weight: bold;
+}
+
+.popup a {
+  text-decoration: none;
+  color: #007bff; /* Color azul para enlaces */
+}
+
+.popup a:hover {
+  text-decoration: underline;
+}
+
+.popup button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block; /* Hacer que el botón sea un bloque para centrarlo */
+  margin-left: auto; /* Centrar horizontalmente */
+  margin-right: auto; /* Centrar horizontalmente */
+}
+
+.popup button:hover {
+  background-color: #45a049;
+}

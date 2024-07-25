@@ -1,0 +1,131 @@
+<button *ngIf="!sesion" class="login-button" (click)="togglePopup()">Iniciar sesión</button>
+
+<div *ngIf="showPopup" class="popup">
+  <form  id="loginform" (ngSubmit)="login()" [formGroup]="loginForm">
+  <div class="popup-header">
+    <button class="close-button" (click)="cerrarLogin()">X</button>
+  </div>
+  <div class="popup-content">
+    <p>Introduce tus datos</p>
+    <!-- Campos de inicio de sesión -->
+    <input type="email" formControlName="email" placeholder="Correo electrónico">
+    <input type="password" formControlName="password" placeholder="Contraseña">
+    <button>Iniciar sesión</button>
+  </div>
+</form>
+<div class="popup-content">
+  <p style="margin-top: 15px;">¿Aún no tienes cuenta?</p>
+  <button (click)="popupRegister()">Crear cuenta</button>
+</div>
+
+</div>
+
+<button *ngIf="sesion" class="user-button" type="button" (click)="toggleDropdown($event)">
+  <img src="../../../assets/images/botonUsuario.png" alt="Icono de usuario">
+</button>
+
+<div *ngIf="dropdownOpen" class="dropdown" (click)="toggleDropdown($event)">
+  <div *ngIf="dropdownOpen" class="dropdown-menu" [ngClass]="{ 'show': dropdownOpen }" aria-labelledby="dropdownMenuButton">
+    <button class="dropdown-item" (click)="showFavs()">Mis favoritos</button>
+    <button class="dropdown-item" (click)="cambioContra()">Cambiar contraseña</button>
+    <button class="dropdown-item" (click)="logout()">Cerrar sesión</button>
+    <button class="dropdown-item" style="color: crimson;" (click)="eliminar()">Eliminar cuenta</button>
+  </div>
+</div>
+
+<div *ngIf="showChangePasswordForm" class="popupPsw">
+  <form  id="loginform" (ngSubmit)="changePsw()" [formGroup]="pswForm">
+    <div class="popup-header">
+
+      <button class="retroceder" (click)="retrocederContra()">
+        <i class="fas fa-arrow-left"></i>
+    </button>
+
+    </div>
+    <div class="popup-content">
+      <p>Introduce tu contraseña actual</p>
+      <!-- Campos de inicio de sesión -->
+      <input type="password" formControlName="pswAct" placeholder="Contraseña actual">
+
+      <p>Introduce la contraseña nueva</p>
+      <input type="password" formControlName="pswNueva" placeholder="Nueva contraseña ">
+      <input type="password" formControlName="pswNueva2" placeholder="Repetir nueva contraseña ">
+      <button>Cambiar contraseña</button>
+    </div>
+  </form>
+</div>
+
+<div *ngIf="showFavoritos" class="popupFav">
+  <div class="popup-header">
+    <button class="retroceder" (click)="retrocederContra()">
+      <i class="fas fa-arrow-left"></i>
+    </button>
+  </div>
+
+  <div  style=" text-align: center;">
+    <h2>Mis favoritos</h2>
+  </div>
+
+  <div class="popup-content">
+    <div *ngIf="favsVacios" style="margin-top: 20px;">
+      <h3>No tienes ningún ejercicio favorito todavía</h3>
+    </div>
+
+
+
+    <div class="exercise-list">
+      <div *ngFor="let ejercicio of exercises" class="exercise-item" (click)="expandExercise(ejercicio, $event)" [attr.data-description]="ejercicio.descripcion">
+        <div class="star-button" (click)="toggleFavorite(ejercicio, $event)">
+          &#9733;
+        </div>
+        <img [src]="'../../../assets/uploads/foto/' + ejercicio.imagen" alt="Imagen del ejercicio" class="exercise-image">
+        <div class="text-container">
+          <span class="exercise-title">{{ ejercicio.titulo }}</span>
+          <span class="exercise-muscle">Músculo: {{ ejercicio.musculo }}</span>
+          <span class="exercise-description">{{ ejercicio.descripcion | slice:0:25 }}{{ ejercicio.descripcion.length > 25 ? '...' : '' }}</span>
+        </div>
+        <div class="play-button" (click)="toggleVideo(ejercicio)">
+          &#9658;
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<div *ngIf="showRegister" class="popup">
+  <form  id="loginform" (ngSubmit)="register()" [formGroup]="registerForm">
+    <div class="popup-header">
+
+      <button class="retroceder" (click)="retrocederLogin()">
+        <i class="fas fa-arrow-left"></i>
+    </button>
+
+    </div>
+    <div class="popup-content">
+      <!-- Campos de registro -->
+      <h2>REGISTRO</h2>
+      <p>Todos los campos son obligatorios</p>
+      <input type="text" formControlName="nombre" placeholder="Nombre">
+      <input type="text" formControlName="apellidos" placeholder="Apellidos">
+      <input type="email" formControlName="email" placeholder="Email">
+      <input type="password" formControlName="password" placeholder="Contraseña ">
+      <input type="password" formControlName="password2" placeholder="Repetir contraseña ">
+      <div class="terms-container">
+        <input type="checkbox" id="terms" formControlName="terms">
+        <label for="terms">
+          Acepto los <a href="/terminos" target="_blank">términos y condiciones</a>
+        </label>
+      </div>
+      <button>Crear cuenta</button>
+    </div>
+  </form>
+</div>
+
+
+
+

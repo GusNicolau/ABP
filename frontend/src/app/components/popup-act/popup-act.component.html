@@ -1,0 +1,35 @@
+<div class="popup">
+    <div class="popup-content">
+      <h2>ACTUALIZAR EJERCICIO</h2>
+      <form>
+        <label>Título:</label>
+        <input type="text" name="titulo" [(ngModel)]="ejercicio.titulo">
+
+        <label>Descripción:</label>
+        <textarea type="text" name="descripcion" [(ngModel)]="ejercicio.descripcion"></textarea>
+
+        <label>Parte del cuerpo:</label>
+        <select class="form-control" name="parteCuerpo" id="parteCuerpo" [(ngModel)]="ejercicio.parteCuerpo">
+          <option value="Brazo">Brazo</option>
+          <option value="Espalda">Espalda</option>
+          <option value="Core">Core</option>
+          <option value="Pierna">Pierna</option>
+        </select>
+
+        <label>Músculo:</label>
+        <select class="form-control" name="musculo" id="musculo" [(ngModel)]="ejercicio.musculo">
+        </select>
+
+        <h1>Músculo actual: {{ ejercicio.musculo }}</h1>
+
+        <!--<label>Imagen:</label>
+        <input type="text" name="imagen" [(ngModel)]="ejercicio.imagen">-->
+
+        <label>Enlace a video:</label>
+        <input type="text" name="enlaceVideo" [(ngModel)]="ejercicio.video">
+
+        <button type="submit" (click)="closePopup()">Guardar</button>
+      </form>
+    </div>
+  </div>
+

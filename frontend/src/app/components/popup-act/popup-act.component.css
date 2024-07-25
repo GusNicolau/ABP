@@ -1,0 +1,60 @@
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 9999;
+  width: 600px; /* Ajusta el ancho según sea necesario */
+}
+
+.popup-content h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333; /* Color del texto */
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea { /* Aplica el estilo a todas las áreas de texto */
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea { /* Ajusta el tamaño específicamente para las áreas de texto */
+  height: 150px; /* Ajusta la altura según sea necesario */
+}
+
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px; /* Agrega margen superior para separarlo del contenido */
+  display: block; /* Hacer que el botón sea un bloque para centrarlo */
+  margin-left: auto; /* Centrar horizontalmente */
+  margin-right: auto; /* Centrar horizontalmente */
+}
+
+button[type="submit"]:hover {
+  background-color: #38703b;
+}

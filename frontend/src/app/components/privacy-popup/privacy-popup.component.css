@@ -1,0 +1,108 @@
+.privacy-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.privacy-popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  width: 80%;
+}
+
+.privacy-popup-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.access-denied-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.privacy-settings-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+}
+
+.privacy-settings-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  width: 80%;
+}
+
+.privacy-settings-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.privacy-settings-content button {
+  padding: 8px 13px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #ff6600; /* Color de fondo naranja */
+  border: none;
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambio de cursor al pasar sobre el botón */
+  transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves */
+  margin: 5px; /* Espacio entre los botones */
+}
+
+.privacy-settings-content button:hover {
+  background-color: #e65c00; /* Color de fondo al pasar el mouse */
+  transform: scale(1.05);
+}
+
+button {
+  padding: 8px 13px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #ff6600; /* Color de fondo naranja */
+  border: none;
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambio de cursor al pasar sobre el botón */
+  transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves */
+  margin: 5px; /* Espacio entre los botones */
+}
+
+button:hover {
+  background-color: #e65c00; /* Color de fondo al pasar el mouse */
+  transform: scale(1.05); /* Agranda el botón ligeramente */
+}
+
+button:active {
+  background-color: #cc5200; /* Color de fondo al hacer clic */
+  transform: scale(1); /* Restablece el tamaño original */
+}

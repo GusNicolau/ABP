@@ -1,0 +1,12 @@
+.card-body {
+  display:flex;
+}
+.card-body>* {
+  flex: 30%;
+}
+tr {
+  display: flex;
+}
+tr>* {
+  flex: 30%;
+}

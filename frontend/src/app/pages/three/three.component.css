@@ -1,0 +1,45 @@
+#newButton {
+    position: absolute; /* Posición absoluta para ubicar el botón */
+    bottom: 20px; /* Colocar el botón 20px desde la parte inferior */
+    left: 50%; /* Alinear desde la mitad izquierda */
+    transform: translateX(-50%); /* Centrar horizontalmente el botón */
+    background-color: #ccc; /* Color de fondo gris */
+    border: none; /* Sin borde */
+    color: #333; /* Texto de color gris oscuro */
+    padding: 10px 20px; /* Espacio interior */
+    text-align: center; /* Alinear texto al centro */
+    text-decoration: none; /* Sin decoración de texto */
+    display: inline-block; /* Mostrar como bloque en línea */
+    font-size: 14px; /* Tamaño de la fuente */
+    margin: 0; /* Eliminar margen */
+    cursor: pointer; /* Cursor de puntero */
+    border-radius: 5px; /* Bordes redondeados */
+    transition-duration: 0.4s; /* Duración de la transición */
+  }
+
+  #newButton:hover {
+    background-color: #aaa; /* Cambiar color de fondo más oscuro al pasar el ratón */
+    color: #333; /* Texto de color gris oscuro */
+  }
+
+  #menuThree {
+    width: 100%;
+    height: 3em;
+    display: flex;
+    background-color: #ff8000;
+  }
+
+  #logoThree {
+    flex: 1;
+    text-align: center;
+    color: white;
+  }
+
+  #opcionesThree {
+    flex: 1;
+    text-align: center;
+    color: white;
+  }
+
+
+ 

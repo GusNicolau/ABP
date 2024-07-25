@@ -1,0 +1,70 @@
+<h1>Nuevo Ejercicio</h1>
+<div class="container-fluid">
+  <!--  <div class="row">
+        <div class="col-md-6">-->
+            <div class="card">
+                <form class="form-horizontal"  id="formulario1">
+                    <div class="card-body">
+                        <h4 class="card-title">Creación de nuevo ejercicio</h4>
+                        <div class="form-group row">
+                            <label for="titulo" class="col-sm-3 text-right control-label col-form-label">Título</label>
+                            <div class="col-sm-9">
+                                <input type="text" name="titulo" class="form-control" id="titulo" placeholder="Título aquí..." [(ngModel)]="ejercicio.titulo">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="descripcion" class="col-sm-3 text-right control-label col-form-label">Descripción</label>
+                            <div class="col-sm-9">
+                                <textarea type="text" name="descripcion"  class="form-control" id="descripcion" placeholder="Descripción aquí..." [(ngModel)]="ejercicio.descripcion"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="imagen" class="col-sm-3 text-right control-label col-form-label">Imagen</label>
+                            <div class="col-sm-9">
+                                <input type="file" class="form-control" name="imagen" id="imagen" accept="image/*" (change)="previewImage($event)">
+                                <img id="imagenPrevia" src="#" alt="Vista previa de la imagen" style="display: none;">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="parteCuerpo" class="col-sm-3 text-right control-label col-form-label">Parte del Cuerpo</label>
+                            <div class="col-sm-9">
+                                <select class="form-control" name="parteCuerpo" id="parteCuerpo" [(ngModel)]="ejercicio.parteCuerpo">
+                                  <option value="Ninguna">Parte del cuerpo aquí...</option>
+                                  <option value="Brazo">Brazo</option>
+                                  <option value="Espalda">Espalda</option>
+                                  <option value="Core">Core</option>
+                                  <option value="Pierna">Pierna</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="musculo" class="col-sm-3 text-right control-label col-form-label">Músculo</label>
+                          <div class="col-sm-9">
+                            <select class="form-control" name="musculo" id="musculo" disabled [(ngModel)]="ejercicio.musculo">
+                              <option value="Ninguno">Primero selecciona parte del cuerpo arriba...</option>
+                            </select>
+                          </div>
+                        </div>
+                       <!-- <div class="form-group row">
+                          <label for="consejos" class="col-sm-3 text-right control-label col-form-label">Consejos</label>
+                          <div class="col-sm-9">
+                              <input type="text" class="form-control" name="consejos" id="consejos" placeholder="Consejos aquí...">
+                          </div>
+                        </div>-->
+                        <div class="form-group row">
+                            <label for="ejercicioAlternativo" class="col-sm-3 text-right control-label col-form-label">Enlace a video</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="enlaceVideo" id="enlaceVideo" placeholder="Enlace del video aquí..." [(ngModel)]="ejercicio.video">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-top">
+                        <div class="card-body">
+                            <button type="submit" class="btn btn-primary" (click)="subirEjercicio()" [disabled]="waiting2"><i class="fas fa-spinner fa-spin m-r-10" *ngIf="waiting2"></i>Crear Ejercicio</button>
+                        </div>
+                    </div>
+                </form>
+        <!--  </div>
+        </div>-->
+  </div>

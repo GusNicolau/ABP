@@ -1,0 +1,38 @@
+/* Estilos para el contenedor del gráfico */
+ngx-charts-line-chart {
+    display: block;
+    width: 100%;
+    height: 400px;
+  }
+  
+  /* Estilos para los ejes */
+  .axis-label {
+    font-size: 14px;
+  }
+  
+  /* Estilos para la leyenda */
+  .legend {
+    font-size: 12px;
+  }
+  
+  /* Estilos para las líneas del gráfico */
+  .line {
+    fill: none;
+    stroke-width: 2;
+  }
+  
+  /* Estilos para los puntos de datos */
+  .circle {
+    fill: white;
+    stroke-width: 2;
+  }
+  
+  /* Estilos para los tooltips */
+  .tooltip {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  

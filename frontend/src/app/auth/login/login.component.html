@@ -1,0 +1,44 @@
+<div id="loginform">
+  <div class="text-center p-t-20 p-b-20">
+      <span class="db"><img src="../../assets/images/logo.png" alt="logo" /></span>
+  </div>
+  <!-- Form -->
+  <form class="form-horizontal m-t-20" id="loginform" (ngSubmit)="login()" [formGroup]="loginForm">
+      <div class="row p-b-30">
+        <p style="margin-left: 80px; color: rgb(255, 30, 0);">Solo accesible para administradores</p>
+          <div class="col-12">
+              <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                      <span class="input-group-text bg-success text-white" id="basic-addon1"><i class="ti-user"></i></span>
+                  </div>
+                  <input type="text" class="form-control form-control-lg" formControlName="email" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" required="">
+              </div>
+              <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                      <span class="input-group-text bg-warning text-white" id="basic-addon2"><i class="ti-pencil"></i></span>
+                  </div>
+                  <input type="password" class="form-control form-control-lg" formControlName="password" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1" required="">
+              </div>
+              <div class="input-group mb-3">
+                <div class="custom-control custom-checkbox mr-sm-2">
+                  <input type="checkbox" class="custom-control-input" formControlName="remember" id="customControlAutosizing1">
+                  <label class="custom-control-label text-light" for="customControlAutosizing1">Recuérdame</label>
+                </div>
+              </div>
+              <div class="input-group mb-3">
+                <button class="btn btn-success float-right" type="submit" [disabled]="waiting"><i class="fas fa-spinner fa-spin m-r-10" *ngIf="waiting"></i>Login</button>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          
+      </div>
+      <div class="row border-top border-secondary">
+          <div class="col-12">
+              <div class="form-group">
+
+              </div>
+          </div>
+      </div>
+  </form>
+</div>

@@ -1,0 +1,76 @@
+<app-popup-course *ngIf='showPopup'></app-popup-course>
+<!--<app-popup *ngIf='showPopup'></app-popup>-->
+
+<h1>Usuarios</h1>
+<form [formGroup]="formularioSearch" (ngSubmit)="search()">
+  <input type="text" formControlName="nombre" placeholder="Buscar usuario...">
+  <button type="submit" class="botBuscador">Buscar</button>
+</form>
+<br>
+<ul *ngIf="users">
+  <div class="row el-element-overlay" id="searcher">
+    <div class="col-lg-3 col-md-6" *ngFor="let user of users">
+        <div class="card">
+            <div class="el-card-item">
+                <div class="el-card-avatar el-overlay-1"> <img [src]="'../../../assets/uploads/foto/usuarioDefecto.png'" alt="user" /> <!-- IMAGEN DEFECTO-->
+                    <div class="el-overlay">
+                        <ul class="list-style-none el-info">
+                            <li class="el-item"><a class="btn default btn-outline image-popup-vertical-fit el-link" [href]="'../../../assets/uploads/foto/usuarioDefecto.png'"><i class="mdi mdi-magnify-plus"></i></a></li>
+                            <li class="el-item"><a class="btn default btn-outline el-link" href="javascript:void(0);"><i class="mdi mdi-link"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="el-card-content">
+                    <h4 class="m-b-0">{{ user.nombre }}</h4> <span class="text-muted">{{ user.email }}</span>
+                    <div class="modeOptions">
+                      <div class="input-group-prepend">
+                        <button><span class="input-group-text bg-info text-white" id="basic-addon00" (click)="mostrarUsuario(user)"><i class="ti-info"></i></span></button>
+                      </div>
+                      <div class="input-group-prepend">
+                        <button><span class="input-group-text bg-warning text-white" id="basic-addon00" (click)="editarUsuario(user)"><i class="ti-slice"></i></span></button>
+                      </div>
+                      <div class="input-group-prepend">
+                        <button><span class="input-group-text bg-danger text-white" id="basic-addon00" (click)="borrarUsuario(user._id)"><i class="ti-eraser"></i></span></button>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</ul>
+<br>
+<hr>
+<H1>Todos los usuarios</H1>
+<hr>
+<br>
+<div class="row el-element-overlay">
+    <div class="col-lg-3 col-md-6" *ngFor="let usuario of usuarios">
+        <div class="card">
+            <div class="el-card-item">
+                <div class="el-card-avatar el-overlay-1"> <img [src]="'../../../assets/uploads/foto/usuarioDefecto.png'" alt="user" /> <!-- IMAGEN DEFECTO-->
+                    <div class="el-overlay">
+                        <ul class="list-style-none el-info">
+                            <li class="el-item"><a class="btn default btn-outline image-popup-vertical-fit el-link" [href]="'../../../assets/uploads/foto/usuarioDefecto.png'"><i class="mdi mdi-magnify-plus"></i></a></li>
+                            <li class="el-item"><a class="btn default btn-outline el-link" href="javascript:void(0);"><i class="mdi mdi-link"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="el-card-content">
+                    <h4 class="m-b-0">{{ usuario.nombre }}</h4> <span class="text-muted">{{ usuario.email }}</span>
+                    <div class="modeOptions">
+                      <div class="input-group-prepend">
+                        <button><span class="input-group-text bg-info text-white" id="basic-addon00" (click)="mostrarUsuario(usuario)"><i class="ti-info"></i></span></button>
+                      </div>
+                      <div class="input-group-prepend">
+                        <button><span class="input-group-text bg-warning text-white" id="basic-addon00" (click)="editarUsuario(usuario)"><i class="ti-slice"></i></span></button>
+                      </div>
+                      <div class="input-group-prepend">
+                        <button><span class="input-group-text bg-danger text-white" id="basic-addon00" (click)="borrarUsuario(usuario._id)"><i class="ti-eraser"></i></span></button>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,5 @@
+PORT=3000
+DBCONNECTION=mongodb://0.0.0.0:27017/tecnicfitDB
+DBCONNECTIONerror=mongodb://localhost:27017/tecnicfitDB
+JWTSECRET=jsuciwmfjapzlwNSADFamsas
+DOCSPERPAGE=10
